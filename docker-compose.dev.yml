@@ -1,0 +1,17 @@
+# development 
+version : "3.8"
+services:
+   dockerized-cra-image:
+    container_name : dockerized-cra-dev-container
+    build:
+      context : . 
+      dockerfile: ./Dockerfile
+      target: development
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app:ro
+      - /app/node_modules
+
+    command : npm start
+   

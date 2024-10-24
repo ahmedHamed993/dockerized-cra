@@ -1,0 +1,7 @@
+# main 
+version : "3.8"
+services:
+  dockerized-cra-image:
+    container_name : dockerized-cra-container
+    ports:
+      - 3000:3000

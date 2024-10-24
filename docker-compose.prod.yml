@@ -1,0 +1,13 @@
+# development 
+version : "3.8"
+services:
+   dockerized-cra-image:
+    container_name : dockerized-cra-prod-container
+    build:
+      context : . 
+      dockerfile: ./Dockerfile
+      target: production
+    environment:
+      NODE_ENV: production
+    command : serve -s build
+   
